@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block title %}Profile{% endblock %} {% block
+content %}
+<h2>My Profile</h2>
+
+{% if user %}
+<table class="table table-bordered w-50">
+  <tr>
+    <th>Username</th>
+    <td>{{ user.username }}</td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>{{ user.email }}</td>
+  </tr>
+  <tr>
+    <th>Full Name</th>
+    <td>{{ user.full_name }}</td>
+  </tr>
+  <tr>
+    <th>Created At</th>
+    <td>{{ user.created_at }}</td>
+  </tr>
+</table>
+{% else %}
+<p class="text-muted">Could not load profile data.</p>
+{% endif %}
+
+<a href="/" class="btn btn-secondary">Back to Home</a>
+{% endblock %}
