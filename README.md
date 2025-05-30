@@ -1,9 +1,7 @@
 ---
-
 # Mini Blogging API
 
 A minimal but production-ready blogging platform built with Flask. Users can register, log in, write blog posts, and comment on others' posts. Authentication is handled using JWT tokens.
-
 ---
 
 ## Features
@@ -70,10 +68,14 @@ flask db upgrade
 flask run
 ```
 
-> Or use the provided PowerShell script (RECOMMENDED):
+> Or use the provided PowerShell/sh script (RECOMMENDED):
 
 ```bash
 .\run.ps1
+```
+
+```bash
+.\run.sh
 ```
 
 ---
@@ -93,13 +95,13 @@ flask run
 
 ### Posts
 
-| Method | Endpoint                  | Description                |
-| ------ | ------------------------- | -------------------------- |
-| GET    | `/api/posts`              | List all published posts   |
-| GET    | `/api/posts/<id>`         | View a single post         |
-| POST   | `/api/posts`              | Create a new post _(auth)_ |
-| PUT    | `/api/posts/<id>`         | Update your post _(auth)_  |
-| DELETE | `/api/posts/<id>`         | Delete your post _(auth)_  |
+| Method | Endpoint          | Description                |
+| ------ | ----------------- | -------------------------- |
+| GET    | `/api/posts`      | List all published posts   |
+| GET    | `/api/posts/<id>` | View a single post         |
+| POST   | `/api/posts`      | Create a new post _(auth)_ |
+| PUT    | `/api/posts/<id>` | Update your post _(auth)_  |
+| DELETE | `/api/posts/<id>` | Delete your post _(auth)_  |
 
 ---
 
