@@ -69,7 +69,7 @@ def create_post(current_user: User, validated_data: dict) -> tuple:
             title=validated_data['title'],
             content=validated_data['content'],
             author_id=current_user.id,
-            is_published=validated_data.get('is_published', True)
+            is_published= True #validated_data.get('is_published', True) # Will work on this later
         )
         
         db.session.add(post)
