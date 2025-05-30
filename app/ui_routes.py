@@ -99,7 +99,14 @@ def edit_post(post_id):
         flash("Update failed", "danger")
     return render_template("post_form.html", post=post)
 
-
+@ui.route("/posts/<int:post_id>/delete", methods=["POST"])
+def delete_post(post_id):
+    res = requests.delete(f"{API_BASE}/posts/{post_id}", headers=get_auth_headers())
+    if res.ok:
+        flash("Post deleted", "success")
+    else:
+        flash("Failed to delete post", "danger")
+    return redirect(url_for("ui.home"))
 
 @ui.route("/comments/<int:comment_id>/delete", methods=["POST"])
 def delete_comment(comment_id):

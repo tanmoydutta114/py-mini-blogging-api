@@ -8,7 +8,7 @@ $env:FLASK_DEBUG = 1
 Write-Host "Checking for virtual environment..."
 if (-Not (Test-Path ".venv")) {
     Write-Host "Creating virtual environment..."
-    py -3.11 -m venv .venv
+    python3.11 -m venv .venv
     .\.venv\Scripts\Activate.ps1
     
 } else {
