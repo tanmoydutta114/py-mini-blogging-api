@@ -1,7 +1,6 @@
 ---
 
-````markdown
-# 📝 Mini Blogging API
+# Mini Blogging API
 
 A minimal but production-ready blogging platform built with Flask. Users can register, log in, write blog posts, and comment on others' posts. Authentication is handled using JWT tokens.
 
@@ -31,7 +30,7 @@ A minimal but production-ready blogging platform built with Flask. Users can reg
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the repo
 
@@ -71,7 +70,7 @@ flask db upgrade
 flask run
 ```
 
-> Or use the provided PowerShell script:
+> Or use the provided PowerShell script (RECOMMENDED):
 
 ```bash
 .\run.ps1
@@ -79,9 +78,9 @@ flask run
 
 ---
 
-## 📦 API Endpoints
+## API Endpoints
 
-### 🔐 Auth
+### Auth
 
 | Method | Endpoint             | Description              |
 | ------ | -------------------- | ------------------------ |
@@ -92,7 +91,7 @@ flask run
 
 ---
 
-### 📝 Posts
+### Posts
 
 | Method | Endpoint                  | Description                |
 | ------ | ------------------------- | -------------------------- |
@@ -101,11 +100,10 @@ flask run
 | POST   | `/api/posts`              | Create a new post _(auth)_ |
 | PUT    | `/api/posts/<id>`         | Update your post _(auth)_  |
 | DELETE | `/api/posts/<id>`         | Delete your post _(auth)_  |
-| GET    | `/api/posts/search?q=...` | Search posts by keyword    |
 
 ---
 
-### 💬 Comments
+### Comments
 
 | Method | Endpoint                  | Description             |
 | ------ | ------------------------- | ----------------------- |
@@ -117,7 +115,7 @@ flask run
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 
 ```bash
 pytest
@@ -127,7 +125,7 @@ All test files are located under the `tests/` directory.
 
 ---
 
-## 🖥️ Folder Structure
+## Folder Structure
 
 ```
 mini-blogging-api/
